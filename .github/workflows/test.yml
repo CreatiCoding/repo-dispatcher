@@ -1,0 +1,12 @@
+name: test
+
+on:
+  repository_dispatch:
+    types: [opened, deleted]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Hello World!"
